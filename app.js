@@ -20,16 +20,12 @@ async function getData() {
 }
 
 function shrinkText(string, element) {
-  if (window.innerWidth < 850) {
+  if (window.innerWidth < 850 || string.length < 100) {
     element.classList.remove("small-text");
-    console.log("no change");
-  } else if (string.length > 100) {
-    console.log("shrink time");
-    console.log(element);
-    element.classList.add("small-text");
-  } else {
     console.log("big time");
-    element.classList.remove("small-text");
+  } else {
+    element.classList.add("small-text");
+    console.log("shrink time");
   }
 }
 
