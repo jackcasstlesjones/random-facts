@@ -1,0 +1,44 @@
+@media (max-width: 1500px) {
+  .fact-element {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .fact-element {
+    font-size: 44px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .header {
+    margin: 30px auto;
+  }
+
+  .fact-element {
+    font-size: 42px;
+    line-height: normal;
+  }
+
+  .container {
+    padding: 0 10px;
+    margin-top: 0px;
+  }
+
+  .new-fact-button {
+    /* bottom: 100px; */
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    font-size: 36px;
+  }
+  .fact-element {
+    line-height: normal;
+    font-size: 36px;
+  }
+}

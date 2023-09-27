@@ -15,7 +15,22 @@ async function getData() {
   if (fact.slice(-1) !== ".") {
     fact = fact + ".";
   }
+  shrinkText(fact, factElement);
   factElement.textContent = fact;
+}
+
+function shrinkText(string, element) {
+  if (window.innerWidth < 850) {
+    element.classList.remove("small-text");
+    console.log("no change");
+  } else if (string.length > 100) {
+    console.log("shrink time");
+    console.log(element);
+    element.classList.add("small-text");
+  } else {
+    console.log("big time");
+    element.classList.remove("small-text");
+  }
 }
 
 getData();
