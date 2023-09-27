@@ -11,6 +11,7 @@ async function getData() {
   });
   const myData = await response.json();
   let fact = myData[0].fact;
+  checkLength(fact);
 
   if (fact.slice(-1) !== ".") {
     fact = fact + ".";
@@ -26,6 +27,13 @@ function shrinkText(string, element) {
   } else {
     element.classList.add("small-text");
     console.log("shrink time");
+  }
+}
+
+function checkLength(string) {
+  if (window.innerWidth < 400 && string.length > 150) {
+    console.log("this one is too long, I will skip it");
+    return getData();
   }
 }
 
